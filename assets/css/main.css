@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+
 body
 { 
 padding-top:70px;
@@ -37,3 +40,43 @@ textarea.parsley-error {
 .parsley-errors-list.filled {
   opacity: 1;
 }
+/* **************
+share code css
+*****************
+*/
+#main-content-share-code
+{
+	background-color:#000000;
+	padding-top:1em;
+	padding-left:80px;
+	position:relative
+	
+	}
+#code
+{
+	font-family:'Source code pro', sans-serif;
+	width: 100%;
+	min-height: 900px;
+	border:none;
+	outline:0;
+	background-color:#000000;
+	color:#C5C5C5;
+	resize:none;
+	font-size:14px;
+	overflow:hidden;
+	
+	
+	}
+	/* **************
+ end share code css
+*****************
+*/
+.nav
+{ position:absolute;
+top:10px;
+right:10px
+}
+	
+	
+
+	

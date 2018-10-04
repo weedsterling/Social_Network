@@ -1,7 +1,7 @@
      <?php
 	 	 session_start();
 		 
-		require('filters/auth.filter.php');
+		require('filters/auth_filter.php');
 		require('config/database.php');
 		require('include/fonctions.php');
 	 	require('include/constante.php');
@@ -40,6 +40,7 @@ if(not_empty(['name', 'ville', 'pays','sexe', 'bio'])) {
 
 		  ]);
 	set_flash(" Felicitations votre profil a été mis a jour ");
+	redirect('profil.php?id='. get_session('user_id'));
  } 
  else {
  	 save_input_data();

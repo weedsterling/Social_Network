@@ -135,9 +135,22 @@ $page = array_pop($a);
 function find_user_by_id($id)
 {
 	global $db;
-	$q = $db->prepare('SELECT name, pseudo, email, city, country, sex , twitter, github,  bio FROM users WHERE id = ?');
+	$q = $db->prepare('SELECT name, pseudo, email, city, country, sex , twitter, github, available_for_hiring,  bio FROM users WHERE id = ?');
 	$q->execute([$id]);
  $data = $q->fetch(PDO::FETCH_OBJ);
+	$q->closecursor();
+	return $data;
+	}
+	}
+	//Trouver l'user par l'id 
+	if(!function_exists('find_code_by_id'))
+{
+function find_code_by_id($id)
+{
+	global $db;
+	$q = $db->prepare('SELECT code FROM codes where id = ?');
+	  $success = $q->execute([$id]);
+    $data = $q->fetch(PDO::FETCH_OBJ);
 	$q->closecursor();
 	return $data;
 	}

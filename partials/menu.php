@@ -9,6 +9,8 @@
     <?php if(is_logged_in()):  ?>;
     <li class="<?= set_active('Profile')?>">
     <a   href="profil.php?id=<?=get_session('user_id')?>"> Mon profil</a></li>
+    <li class="<?= set_active('Partage')?>" ><a  href="share_code.php">Partager</a></li>
+
             <li ><a  href="logout.php">Deconnexion</a></li>
 
     <?php else: ?>
