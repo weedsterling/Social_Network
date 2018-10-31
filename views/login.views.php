@@ -16,7 +16,7 @@
   <!-- Pseudo or email field --> 
   <div  class="form-group" >
   <label class="Control-label" for="Identifiant">Pseudo ou email :</label>
-  <input type="text" class="form-control" required id="Identifiant" value="<?= get_input('Identifiant')?>" name="Identifiant" data-parsley-trigger = 'keypress'   / >
+  <input type="text" class="form-control"  id="Identifiant" value="<?= get_input('Identifiant')?>" name="Identifiant"  data-parsley-trigger='keypress' required  / >
   </div>
   
   

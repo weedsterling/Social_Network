@@ -7,8 +7,8 @@
 <div id="main-content">
 <div   id="main-content-share-code">
   <form  method="post" autocomplete="off">
-  <textarea name="code" id="code" placeholder="Entrez votre code source ici"  required> <?= $code ?> </textarea>
-  <div class="btn-group nav">
+  <textarea name="code" id="code" placeholder="Entrez votre code source ici"  required> <?= e($code) ?> </textarea>
+  <div class="btn-group nav-code">
   <a    href="share_code.php" class="btn btn-danger" >Tout Effacer </a>
   <input type="submit" class="btn btn-success  " name="save" value="Enregistrer">
   </div>

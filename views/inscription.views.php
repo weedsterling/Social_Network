@@ -34,13 +34,13 @@
   <!-- Password field --> 
   <div  class="form-group">
   <label class="Control-label" for="Password">Mot de passe :</label>
-  <input  type="password" class="form-control" id="Password"  name="Password"  required / >
+  <input  type="password" class="form-control" id="Password"  name="Password" data-parsley-trigger = 'keypress'  required / >
   </div>
   
   <!-- Password confirmation field --> 
   <div  class="form-group">
   <label class="Control-label" for="Password_Confirm">Confirmer Votre Mot de passe :</label>
-  <input  type="password" class="form-control" id="Password_Confirm"  name="Password_Confirm"  required data-parsley-equalto ="#password" / >
+  <input  type="password" class="form-control" id="Password_Confirm" required data-parsley-trigger = 'keypress'  name="Password_Confirm"  / >
   </div>
   
     <input   type="submit"  class="btn btn-primary"  value="Inscription" name="Inscription" / >

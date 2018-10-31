@@ -52,7 +52,7 @@ if(mb_strlen($pseudo)< 3) //mb_strlen permet de compter le nombre de caractere t
 				 // envoi d'un mail d'activation
 				 $to = $Email;
 				 $subject = '- ACTIVATION DE COMPTE';
-				 $Password = sha1($Password);
+				 $Password = password_hash($Password, PASSWORD_BCRYPT);
 				 $token = sha1($pseudo.$Email.$Password);
 				 ob_start();
 			 require('templates/emails/activation.tmpl.php');

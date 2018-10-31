@@ -11,6 +11,26 @@ function e($string)
 	
 		}
 			}
+		
+		
+			if(!function_exists('redirect_intent_or'))
+{
+function redirect_intent_or($default_url)
+{
+	if($_SESSION['forwarding_url'])
+	{
+		$url = $_SESSION['forwarding_url'];
+		 $_SESSION['forwarding_url'] = null;
+		}
+		else
+		{
+			$url = $default_url;
+			
+			}
+	
+	 redirect($url);
+		}
+			}
 	
 	
 if(!function_exists('not_empty'))
@@ -82,8 +102,8 @@ if(count($fields) != 0)
 	}
 	// Obtenir l'url de l'avatar
 	if(!function_exists('get_avatar_url')){
-		function get_avatar_url($email){
-			return "http://gravatar.com/avatar/".md5(strtolower(trim(e($email))));
+		function get_avatar_url($email, $size=25){
+			return "http://gravatar.com/avatar/".md5(strtolower(trim(e($email))))."?s=".$size;
 			
 		}
 	}

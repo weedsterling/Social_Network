@@ -1,5 +1,6 @@
+<? xml version= " 1.0 " encoding="iso −8959−1" ?>
 <!DOCTYPE html>
-<html lang="fr">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr">
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,10 +15,10 @@
 </title>
 
 <!-- Bootstrap core CSS -->
-<link href="../../bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="../../bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 <link  href="assets/css/main.css" rel="stylesheet">
-
+<link href="assets/js/prettify-small/google-code-prettify/prettify.css"/>
 
 <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
