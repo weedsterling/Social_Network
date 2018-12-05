@@ -1,5 +1,4 @@
 <?php $title = 'Accueil' ?>
-<?php include('include/constante.php'); ?>
 <?php include('partials/header.php'); ?>
 
 <div id="main-content">

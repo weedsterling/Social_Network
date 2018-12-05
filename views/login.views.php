@@ -28,6 +28,14 @@
   </div>
   
   
+  <!-- Remenber me field --> 
+  <div  class="form-group">
+  <label class="Control-label" for="remenber_me">
+  <input  type="checkbox"  id="remenber_me"  name="remenber_me" / >
+  Garder ma session active
+  </label>
+  </div>
+  
   
     <input   type="submit"  class="btn btn-primary"  value="Login" name="Login" / >
 

@@ -2,7 +2,6 @@
 <?php include('partials/header.php'); ?>
 <link href="../bootstrap.min.css" rel="stylesheet" type="text/css">
 
-
 <div id="main-content">
 <div class="container">
  <div class="row">
@@ -12,7 +11,7 @@
     <div class="panel-heading"><h3 class="panel-title">Completer mon Profil  </h3></div>
     <div class="panel-body">
     <?php include('partials/error.php'); ?>
-     <form data-parsley-validate method="post" autocomplete="on" >
+     <form  data-parsley-validate method="post" autocomplete="on" enctype="multipart/form-data" >
 	<div class="row"> 
     <div class="col-md-6">
   <!-- Name field --> 
@@ -29,6 +28,15 @@
     </div>
     </div>
    </div>
+
+   <div class="row"> 
+    <div class="col-md-12">
+<!-- Avatar field --> 
+<label  for="avatar">Changer Mon avatar</label>
+ <input type="file" name="photo" value="<?=  get_input('photo') ?: e($user->photo) ?>" required />
+     </div>
+   </div>
+   <br/>
   <!-- Pays field --> 
   <div class="row">
   <div class="col-md-6">
@@ -73,7 +81,7 @@
   <div class="col-md-12">
   <div  class="form-group">
    <label  for="available_for_hiring">
-  <input  type="checkbox"  id="available_for_hiring" required  name="available_for_hiring" <?= $user->available_for_hiring == '1'? 'checked' :'' ?>  / >
+  <input  type="checkbox"  id="available_for_hiring"  name="available_for_hiring" <?= $user->available_for_hiring == '1'? 'checked' :'' ?>  / >
  Disponible pour emploi ?
  </label>
   
@@ -85,7 +93,7 @@
   <div class="col-md-12">
    <div  class="form-group">
    <label  for="bio">Biographie<span  class="text-danger"> *</span></label>
-   <textarea name="bio"  id="bio" cols="30" rows="10" class="form-control" placeholder="Je suis un ammoureux de la programmation" ><?= e($user->bio) ?> </textarea>
+   <textarea name="bio"  id="bio" cols="30" rows="10" class="form-control" placeholder="Veuillez renseigner votre bio ici" ><?= e($user->bio) ?> </textarea>
    </div>
   </div>
   </div>

@@ -6,6 +6,26 @@ body
 padding-top:70px;
 	
 }
+li.have_notifs > a{
+color: red !important;
+ font-weight: bold;
+}
+.not_seen{
+ background-color: #f2f2f2;
+ }
+.avatar-md
+{ 
+border-radius:100px;
+width:100px;
+height:100px
+}
+.avatar-xs
+{ 
+border-radius:100px;
+width:25px;
+height:25px
+}
+
 input.parsley-success,
 select.parsley-success,
 textarea.parsley-success {
@@ -95,10 +115,53 @@ margin-bottom: 3em;
 
 text-align:center;
  
+}
+.statuts-media
+{ 
+
+border: 1px solid #e3e3e3;
+background-color: #FFFFFF;
+padding:1em;
+margin-bottom:2em;
+word-break:break-all;
+  
 }	
  .user-block .avatar	
 { 
 
 margin:auto
  
+}
+.statuts-post
+{ 
+
+border: 1px solid #e3e3e3;
+background-color: #FFFFFF;
+
+}
+.statuts-post textarea
+{ 
+
+ 
+}
+.statuts-post textarea:focus
+{ 
+box-shadow:none;
+ 
+}
+.statuts-post-submit
+{ 
+
+padding: 0.5em 1em;
+overflow: hidden;
+margin-bottom:0; 
+ 
+ 
+}
+
+.statuts-post-submit .btn
+{ 
+
+float:right;
+
 }

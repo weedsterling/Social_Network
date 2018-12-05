@@ -1,10 +1,8 @@
 <?php 
 session_start();
 
-require('config/database.php');
-require('include/fonctions.php');
+require("include/init.php");
 require('filters/auth_filter.php');
-require('include/constante.php');
 
 
 if(!empty($_GET['id'])) {

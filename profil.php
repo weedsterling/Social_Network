@@ -1,10 +1,8 @@
      <?php
 	 	 session_start();
 		 
-		require('config/database.php');
-		require('include/fonctions.php');
+		require("include/init.php");
 		require('filters/auth_filter.php');
-	 	require('include/constante.php');
 		
 		if(!empty($_GET['id']))
 		{
@@ -14,6 +12,15 @@
 		if(!$user)
 		{
 			redirect('index.php');
+		}
+		else 
+		{
+			$q = $db->prepare('SELECT id,content,like_count, created_at FROM microposts WHERE user_id = :user_id ORDER BY created_at DESC');
+			$q->execute([ 
+			'user_id' => $_GET['id']
+			]);
+			$microposts = $q->fetchAll( PDO::FETCH_OBJ);
+			
 		}
 		} else
 		

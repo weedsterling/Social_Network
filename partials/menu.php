@@ -1,3 +1,4 @@
+   
 <link href="../bootstrap.min.css" rel="stylesheet" type="text/css">
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container">
@@ -14,13 +15,19 @@
  
     <li class="<?= set_active('Profile')?>">
     <a   href="profil.php?id=<?=get_session('user_id')?>"> Mon profil</a></li>
-    <li class="<?= set_active('Partage')?>" ><a  href="share_code.php">Partager</a></li>
+        <li class="<?= set_active('change_password')?>" ><a  href="share_code.php">Partager</a></li>
+    <li class="<?= set_active('Partage')?>" ><a  href="change_password.php">Modifier le mot de passe</a></li>
 <li class="<?= set_active('Edition de profil')?>">
     <a   href="edit_user.php?id=<?=get_session('user_id')?>"> Editer mon profil	</a></li>
+    <li class="<?= $notifications_count > 0 ? 'have_notifs' : '' ?>">
+<a href="notifications.php"><i class="fa fa-bell"></i>
+ <?= $notifications_count > 0 ? "($notifications_count)" : ''; ?>
+ </a>
+ </li>
   <li ><a  href="logout.php">Deconnexion</a></li>
 <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <img src="<?= get_avatar_url(get_session('email')) ?>" alt="Image de profil de <?= get_session('pseudo') ?>"  class="img-circle"> 
+          <img src="<?= get_session('url') ? get_session('url') : get_avatar_url(get_session('email')) ?>" alt="Image de profil de <?= get_session('pseudo') ?>"  class="avatar-xs"> 
           </a>
           
         </li>

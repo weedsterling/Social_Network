@@ -1,8 +1,6 @@
      <?php
 
 	 	 session_start();
-		 require('include/fonctions.php');
-		
-	 	 require('views/index.views.php');
-
-   
+		 require('include/init.php');	
+	 	 
+        require('views/index.views.php');
