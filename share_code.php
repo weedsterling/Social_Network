@@ -37,6 +37,8 @@ if(not_empty(['code'])) {
  {
  //Affichage du code source
  $id = $db->lastInsertId();
+ $fullURL = WEBSITE_URL.'/show_codes.php?id='.$id;
+ create_micropost_for_the_current_user('Je viens de publier un nouveau code source : '.$fullURL);
  redirect('show_codes.php?id='.$id);
  }
 	 else

@@ -12,16 +12,12 @@ if(isset($_POST['publish']))
 	extract($_POST);
 	if (mb_strlen($content) >= 3)
 	{
-	$q = $db->prepare('INSERT INTO microposts(content, user_id, created_at) VALUES(:content, :user_id, now() )');	
-	$q->execute([
-	'content' => $content,
-	'user_id' => get_session('user_id')
-	]);
+		create_micropost_for_the_current_user($content);
 	set_flash('Votre Statut a été mis à jour!');
 	}
 	else
 	{
-		set_flash("Veuillez entrez au moins 3   caractères SVP !!",danger);
+		set_flash("Veuillez entrez au moins 3 caractères SVP !!",danger);
 		}
 		}
 		

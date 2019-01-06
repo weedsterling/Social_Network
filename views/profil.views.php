@@ -69,6 +69,7 @@
    </form>
    </div>
    <?php endif; ?>
+   <?php if(current_user_is_friend_with($_GET['id'])): ?>
    <?php if(count($microposts) != 0): ?>
    <?php foreach( $microposts as $micropost): ?>
     <?php require('partials/microposts.php')?>
@@ -77,6 +78,8 @@
       <br/>
       <p>Cet utilisateur n'a rien posté pour le moment ...</p>
       <?php endif; ?>
+       <?php endif; ?>
+
    </div>
  </div>
  </div>

@@ -25,7 +25,54 @@ border-radius:100px;
 width:25px;
 height:25px
 }
+#display-results
+{
+	width:250px;
+	background-color:#fff;
+	color:#000;
+	border-left:1px solid #dedede;
+	border-right:1px solid #dedede;
+	border-bottom:1px solid #dedede;
+	position:fixed;
+	display:block;
 
+}
+#navbar_header
+{
+	background-color:#FCFCFC
+}
+.display-box-user
+{
+
+padding:4px; 
+border-top:1px solid #dedede;
+height:60px;
+font-size:15px;
+position:relative
+	
+	}
+	.display-box-user:hover a
+	{
+		color:#fff;
+		text-decoration: none;
+		}
+		.display-box-user a
+	{
+		color:#333;
+		text-decoration: none;
+		display:block;
+		}
+	.display-box-user:hover
+	{
+		
+		background-color:#3b5998;
+		cursor:pointer;
+		}
+#searchbox
+{
+	margin-top: 10px;
+    width: 250px;
+	}
 input.parsley-success,
 select.parsley-success,
 textarea.parsley-success {

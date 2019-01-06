@@ -13,9 +13,9 @@
      <hr>
      <p>
      <?php if(user_has_already_liked_the_micropost($micropost->id)):?>
-     <a class="like" href="unlike_micropost.php?id=<?= $micropost->id ?>">Je n'aime plus </a>
+     <a   href="unlike_micropost.php?id=<?= $micropost->id ?>">Je n'aime plus </a>
      <?php else: ?>
-     <a class="like" href="like_micropost.php?id=<?= $micropost->id ?>">J'aime </a>
+     <a  href="like_micropost.php?id=<?= $micropost->id ?>">J'aime </a>
 	 <?php endif; ?>
 
      </p>

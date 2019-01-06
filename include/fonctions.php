@@ -11,6 +11,21 @@ function e($string)
 	
 		}
 			}
+			//Permet de creer un micropost pour l'utilisateur connecte
+			if(!function_exists('create_micropost_for_the_current_user'))
+{
+function create_micropost_for_the_current_user($content)
+{
+	global $db;
+	$q = $db->prepare('INSERT INTO microposts(content, user_id, created_at) VALUES(:content, :user_id, now() )');	
+	$q->execute([
+	'content' => $content,
+	'user_id' => get_session('user_id')
+	]);
+	
+		}
+			}
+			
 // Verifie si l'utilisateur courant a deja liké le micropost
 if(!function_exists('user_has_already_liked_the_micropost'))
 {
@@ -48,6 +63,28 @@ function if_a_friend_request_has_already_sent($id1,$id2)
 	
 		}
 			}
+			//checks if the current user is friend with the second user
+		if(!function_exists('current_user_is_friend_with'))
+{
+function current_user_is_friend_with($second_user_id)
+{
+		global $db;
+		  
+		  $q = $db->prepare("SELECT statuts FROM friends_relationships WHERE user_id1 = :user_id1 AND user_id2 = :user_id2 OR (user_id1 = :user_id2 AND user_id2 = :user_id1) AND statuts = '1' "); 
+		  $q->execute([
+		  'user_id1'=>get_session('user_id'),
+		  'user_id2'=>$second_user_id
+		  ]);
+		  
+		  $count = $q->rowcount();
+		  
+		  $q->closecursor();
+		  
+		  return(bool) $count;
+	
+		}
+			}
+			
 		//friends count
 	if(!function_exists('friends_count'))
 {
@@ -159,7 +196,7 @@ if(count($fields) != 0)
 	// Obtenir l'url de l'avatar
 	if(!function_exists('get_avatar_url')){
 		function get_avatar_url($email, $size=25){
-			return "http://gravatar.com/avatar/".md5(strtolower(trim(e($email))))."?s=".$size;
+			return "http://gravatar.com/avatar/".md5(strtolower(trim(e($email))))."?s=".$size.'&d=mm';
 			
 		}
 	}
